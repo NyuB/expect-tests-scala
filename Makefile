@@ -1,7 +1,7 @@
 ifeq ($(OS), Windows_NT)
-	MILLW=millw
+	MILLW=mill
 else
-	MILLW=./millw
+	MILLW=./mill
 endif
 
 .PHONY: dev test

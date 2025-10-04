@@ -1,5 +1,6 @@
 # vs code config files
 .bloop
+.bsp
 .metals
 .vscode
 

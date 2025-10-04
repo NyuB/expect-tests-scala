@@ -20,8 +20,8 @@ trait SharedConfiguration extends ScalaModule {
         )
 
     trait Tests extends ScalaTests with TestModule.Munit {
-        override def ivyDeps = super.ivyDeps() ++ Agg(
-          ivy"org.scalameta::munit:${Versions.munit}"
+        override def mvnDeps = super.mvnDeps() ++ Seq(
+          mvn"org.scalameta::munit:${Versions.munit}"
         )
 
     }
@@ -29,8 +29,8 @@ trait SharedConfiguration extends ScalaModule {
 }
 
 object expect extends ScalaModule with SharedConfiguration {
-    override def ivyDeps = super.ivyDeps() ++ Agg(
-      ivy"org.scalameta::munit:${Versions.munit}"
+    override def mvnDeps = super.mvnDeps() ++ Seq(
+      mvn"org.scalameta::munit:${Versions.munit}"
     )
 
     object test extends Tests
